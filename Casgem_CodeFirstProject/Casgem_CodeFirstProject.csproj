@@ -132,6 +132,7 @@
     <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminGuideController.cs" />
+    <Compile Include="Controllers\BokingController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
@@ -459,6 +460,7 @@
     <Content Include="Views\Trips\Index.cshtml" />
     <Content Include="Views\Message\Index.cshtml" />
     <Content Include="Views\Message\MessageDetails.cshtml" />
+    <Content Include="Views\Boking\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
