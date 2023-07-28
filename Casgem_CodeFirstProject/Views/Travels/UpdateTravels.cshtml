@@ -1,0 +1,22 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Travel
+@{
+    ViewBag.Title = "UpdateTravels";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Seyahat Güncelleme Sayfası</h2>
+
+
+<form action="/Travels/UpdateTravels/@Model.TravelID" method="post">
+    @Html.HiddenFor(x => x.TravelID)
+    <label>Seyahat Adı: </label>
+    @Html.TextBoxFor(x => x.TravelName, new { @class = "form-control" })
+    <br />
+    <label>Seyahat Icon: </label>
+    @Html.TextBoxFor(x => x.TravelIcon, new { @class = "form-control" })
+    <br />
+    <label>Açıklama: </label>
+    @Html.TextBoxFor(x => x.TravelDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>

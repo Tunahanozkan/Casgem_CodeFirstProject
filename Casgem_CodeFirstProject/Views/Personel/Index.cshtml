@@ -1,0 +1,30 @@
+﻿﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Personel>
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Admin/Index.cshtml";
+    }
+
+    <h2>Personeller</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ad Soyad</th>
+            <th>Meslek</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PersonelID</td>
+                <td>@item.PersonelName</td>
+                <td>@item.PersonelJob</td>
+                <td><a class="btn btn-success" href="/Personel/UpdatePersonel/@item.PersonelID">Güncelle</a></td>
+                <td><a class="btn btn-danger" href="/Personel/DeletePersonel/@item.PersonelID">Sil</a></td>
+            </tr>
+        }
+
+    </table>
+
+    <a href="/Personel/AddPersonel" class="btn btn-info">Yeni Personel Girişi</a>
+
+

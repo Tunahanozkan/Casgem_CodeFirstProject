@@ -1,0 +1,35 @@
+﻿﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Travel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>İletişim</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Seyahat Adı:</th>
+        <th>seyahat Icon:</th>
+        <th>Açıklama</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TravelID</td>
+            <td>@item.TravelName</td>
+            <td>@item.TravelIcon</td>
+            <td>@item.TravelDescription</td>
+            <td><a class="btn btn-success" href="/Travels/UpdateTravels/@item.TravelID">Güncelle</a></td>
+            <td><a href="/Travels/TravelsDetails/@item.TravelID" class="btn btn-outline-dark">Görüntüle</a></td>
+            <td><a class="btn btn-danger" href="/Travels/DeleteTravels/@item.TravelID">Sil</a></td>
+        </tr>
+    }
+
+</table>
+
+<a href="/Travels/AddTravels" class="btn btn-info">Yeni Seyahat Girişi</a>
+
+
+

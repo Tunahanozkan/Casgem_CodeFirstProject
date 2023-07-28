@@ -1,0 +1,34 @@
+﻿﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Contact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>İletişim</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Adres</th>
+        <th>Mail</th>
+        <th>Tel No</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ContactID</td>
+            <td>@item.ContactNameSurname</td>
+            <td>@item.Subject</td>
+            <td>@item.Mail</td>
+            <td>@item.Message</td>
+            <td><a class="btn btn-success" href="/AdminContact/UpdateContact/@item.ContactID">Güncelle</a></td>
+            <td><a href="/AdminContact/ContactDetails/@item.ContactID" class="btn btn-outline-dark">Görüntüle</a></td>
+            <td><a class="btn btn-danger" href="/AdminContact/DeleteContact/@item.ContactID">Sil</a></td>
+        </tr>
+    }
+
+</table>
+
+<a href="/AdminContact/AddContact" class="btn btn-info">Yeni iletişim Girişi</a>
+

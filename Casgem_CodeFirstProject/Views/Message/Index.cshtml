@@ -1,0 +1,33 @@
+﻿﻿@model List<Casgem_CodeFirstProject.DAL.Entities.Message>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Mesajlar</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Adres</th>
+        <th>Mail</th>
+        <th>Tel No</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MessageID</td>
+            <td>@item.MessageName</td>
+            <td>@item.MessageMail</td>
+            <td>@item.MessageSubject</td>
+            <td>@item.MessageDescription</td>
+            <td><a href="/Message/MessageDetails/@item.MessageID" class="btn btn-outline-dark">Görüntüle</a></td>
+            <td><a class="btn btn-danger" href="/Message/DeleteMessage/@item.MessageID">Sil</a></td>
+        </tr>
+    }
+
+</table>
+
+
+

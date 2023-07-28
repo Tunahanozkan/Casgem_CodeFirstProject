@@ -1,0 +1,21 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Contact 
+@{
+    ViewBag.Title = "ContactDetails";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<div class="card text-white bg-info mb-3" style="max-width: %100;">
+    <div class="card-header">İletişim</div>
+    <div class="card-body">
+        <h6 class="card-title"><strong>İletişim Detayları Görüntüleniyor</strong></h6>
+        Adı Soyadı: @Html.DisplayFor(x => x.ContactNameSurname)
+        <br />
+        Email: @Html.DisplayFor(x => x.Mail)
+        <br />
+        Telefon: @Html.DisplayFor(x => x.Message)
+        <br />
+        Adres: @Html.DisplayFor(x => x.Subject)
+    </div>
+</div>
+
+

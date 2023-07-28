@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AddContact";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Yeni İletişim Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Adı Soyadı: </label>
+    <input type="text" class="form-control" name="ContactNameSurname" />
+    <br />
+    <label>Email: </label>
+    <input type="text" class="form-control" name="Mail" />
+    <br />
+    <label>Tel No: </label>
+    <input type="text" class="form-control" name="Message" />
+    <br />
+    <label>Adres: </label>
+    <input type="text" class="form-control" name="Subject" />
+    <br />
+    <button class="btn btn-info">İletişim Kaydet</button>
+</form>
+
+

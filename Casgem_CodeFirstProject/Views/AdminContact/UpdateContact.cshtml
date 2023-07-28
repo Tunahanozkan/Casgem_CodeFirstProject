@@ -1,0 +1,25 @@
+﻿@model  Casgem_CodeFirstProject.DAL.Entities.Contact
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>İletişim Güncelleme Sayfası</h2>
+
+
+<form action="/AdminContact/UpdateContact/@Model.ContactID" method="post">
+    @Html.HiddenFor(x => x.ContactID)
+    <label>Adı Soyadı: </label>
+    @Html.TextBoxFor(x => x.ContactNameSurname, new { @class = "form-control" })
+    <br />
+    <label>Eposta: </label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <label>Telefon No: </label>
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    <br />
+    <label>Adres:</label>
+    @Html.TextBoxFor(x => x.Message, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>

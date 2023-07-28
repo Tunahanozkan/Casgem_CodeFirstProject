@@ -1,0 +1,16 @@
+﻿@model  List<Casgem_CodeFirstProject.DAL.Entities.Holiday>
+<section class="w3l-stats">
+    <div class="main-w3 ">
+        <div class="container">
+            @foreach (var item in Model)
+            {
+                <div class="right-side">
+                    <h3 class="title-big"> Kral Charles Buckingham Sarayı.</h3>
+                    <p class="mt-4 para">
+                         @item.HolidayDescription
+                    </p>
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.Message
+@{
+    ViewBag.Title = "MessageDetails";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<div class="card text-white bg-info mb-3" style="max-width: %100;">
+    <div class="card-header">Mesajlar</div>
+    <div class="card-body">
+        <h6 class="card-title"><strong>Mesaj Detayları Görüntüleniyor</strong></h6>
+        Adı Soyadı: @Html.DisplayFor(x => x.MessageName)
+        <br />
+        Email: @Html.DisplayFor(x => x.MessageMail)
+        <br />
+        Konu: @Html.DisplayFor(x => x.MessageSubject)
+        <br />
+        Açıklama: @Html.DisplayFor(x => x.MessageDescription)
+    </div>
+</div>
+
+

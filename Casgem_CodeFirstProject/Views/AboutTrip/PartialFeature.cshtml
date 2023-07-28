@@ -1,0 +1,30 @@
+﻿@model  List<Casgem_CodeFirstProject.DAL.Entities.Holiday>
+<section class="w3l-inner-banner-main">
+    <div class="about-inner about editContent">
+        <div class="container">
+            <div class="breadcrumbs-sub">
+                <ul class="breadcrumbs-custom-path">
+                    <li class="right-side propClone"><a href="index.html" class="editContent">Anasayfa <span class="fa fa-angle-right" aria-hidden="true"></span></a> <p></li>
+                    <li class="active editContent">Hakkımızda</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="w3l-content-with-photo-4" id="about">
+    <div class="content-with-photo4-block editContent">
+        <div class="container">
+            @foreach (var item in Model)
+            {
+                <div class="my-bio">
+                    <img src="@item.HolidayImageUrl" alt="product" class="img-responsive about-me">
+                    <h3 class="mt-lg-4 mt-3">@item.HolidayName</h3>
+                    <p class="para mb-3">@item.HolidayDescription</p>
+                </div>
+            }
+        </div>
+    </div>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+﻿@model  Casgem_CodeFirstProject.DAL.Entities.Personel
+@{
+    ViewBag.Title = "UpdatePersonel";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>İletişim Güncelleme Sayfası</h2>
+
+
+<form action="/Personel/UpdatePersonel/@Model.PersonelID" method="post">
+    @Html.HiddenFor(x => x.PersonelID)
+    <label>Adı Soyadı: </label>
+    @Html.TextBoxFor(x => x.PersonelName, new { @class = "form-control" })
+    <br />
+    <label>Meslek: </label>
+    @Html.TextBoxFor(x => x.PersonelJob, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Verileri Güncelle</button>
+</form>

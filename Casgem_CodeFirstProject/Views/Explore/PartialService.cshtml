@@ -1,0 +1,41 @@
+﻿@model  List<Casgem_CodeFirstProject.DAL.Entities.Travel>
+
+<section class="w3l-inner-banner-main">
+    <div class="about-inner services editContent">
+        <div class="container">
+
+            <div class="breadcrumbs-sub">
+                <ul class="breadcrumbs-custom-path">
+                    <li class="right-side propClone"><a href="/Default/Index" class="editContent">Anasayfa <span class="fa fa-angle-right" aria-hidden="true"></span></a> <p></li>
+                    <li class="active editContent">Keşfedin</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumbs //-->
+<section class="w3l-recent-work-hobbies" id="services">
+    <div class="recent-work editContent">
+        <div class="container">
+            <div class="row service-service">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 propClone about-line-top ">
+                        <div class="color-white editContent">
+                            <div class="icon-back"><span class="@item.TravelIcon"></span></div>
+
+                            <h5>
+                                <a href="#url" class="editContent">
+                                   @item.TravelName
+                                </a>
+                            </h5>
+                            <p class="para editContent">
+                               @item.TravelDescription
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,24 @@
+﻿@model Casgem_CodeFirstProject.DAL.Entities.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<form method="post">
+    @Html.HiddenFor(x => x.AboutID)
+    <label>Ad</label>
+    @Html.TextBoxFor(x => x.AboutName, new { @class = "form-control" })
+    <label>Soyad</label>
+    @Html.TextBoxFor(x => x.AboutSurname, new { @class = "form-control" })
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.AboutMail, new { @class = "form-control" })
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.AboutPhone, new { @class = "form-control" })
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.AboutAddress, new { @class = "form-control" })
+    <label>Konu</label>
+    @Html.TextBoxFor(x => x.AboutSubject, new { @class = "form-control" })
+
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
